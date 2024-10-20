@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControls.Pages.MauiCommandControls"
+             Title="MauiCommandControls">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="10">
+
+            <Button Text="Clique para Rodar o texto!"
+                    BackgroundColor="Green"
+                    x:Name="btnDemo"
+                    Clicked="btnDemo_Clicked"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+
+            <Label x:Name="lblDemo"
+                   Text=".NET MAUI"
+                   TextColor="Blue"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+
+            <Button Text="Clique para Rodar o texto!"
+                    BackgroundColor="Green"
+                    ImageSource="android_os.svg"
+                    x:Name="btnDemo2"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    IsEnabled="False"
+                    Clicked="btnDemo_Clicked" />
+
+            <ImageButton Source="dotnet_bot.svg"
+                         x:Name="btnImgDemo"
+                         Aspect="AspectFit"
+                         BorderColor="Black"
+                         Clicked="btnImgDemo_Clicked"
+                         HeightRequest="100"
+                         WidthRequest="100"
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" />
+
+            <StackLayout Padding="20">
+                <Label Text="Qual o seu animal favorito?" 
+                       FontSize="Large" 
+                       TextColor="Blue" />
+                <RadioButton Content="Gato" 
+                             Value="Gato" 
+                             GroupName="Pets2"
+                             CheckedChanged="RadioButton_CheckedChanged" />
+                <RadioButton Content="Cachorro" 
+                             Value="Cachorro"
+                             GroupName="Pets2" />
+                <RadioButton Content="Galo" 
+                             Value="Galo"
+                             GroupName="Pets2" />
+                <Label x:Name="lblPets2" Text=""/>
+            </StackLayout>
+
+            <StackLayout>
+                <SearchBar Placeholder="Procurar produto"
+                           SearchButtonPressed="SearchBar_SearchButtonPressed"
+                           BackgroundColor="Cyan"/>
+            </StackLayout>
+
+            <SwipeView BackgroundColor="LightCyan">
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem 
+                            BackgroundColor="LightGreen" 
+                            IconImageSource="gato50.png" 
+                            Invoked="SwipeItem_Invoked" 
+                            Text="Gato" />
+                        <SwipeItem 
+                            BackgroundColor="LightPink" 
+                            IconImageSource="galo50.png" 
+                            Invoked="SwipeItem_Invoked" 
+                            Text="Galo" />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+
+                <SwipeView.RightItems>
+                    <SwipeItem 
+                        BackgroundColor="LemonChiffon" 
+                        IconImageSource="cao50.png" 
+                        Invoked="SwipeItem_Invoked" 
+                        Text="Cachorro" />
+                </SwipeView.RightItems>
+
+                <Grid BackgroundColor="LightGray" 
+                      HeightRequest="60" 
+                      WidthRequest="300">
+                    <Label HorizontalOptions="Center" 
+                           Text="&lt;== Deslizar ==&gt;" 
+                           FontSize="Large" 
+                           VerticalOptions="Center" />
+                </Grid>
+
+            </SwipeView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
