@@ -49,6 +49,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\galaxia1.jpg" />
+	  <None Remove="Resources\Images\galaxia2.jpg" />
+	  <None Remove="Resources\Images\galaxia3.jpg" />
+	  <None Remove="Resources\Images\galaxia4.jpg" />
+	  <None Remove="Resources\Images\galaxia5.jpg" />
 	  <None Remove="Resources\Images\galo50.png" />
 	</ItemGroup>
 
@@ -57,6 +62,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Pages\MauiCollectionControls.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\MauiCommandControls.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
